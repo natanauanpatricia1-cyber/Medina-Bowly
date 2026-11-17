@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Medina Bowl — Moroccan flavour. Fresh perspective. Fresh, balanced bowls inspired by Morocco.">
+<title>Medina Bowl | Moroccan flavour. Fresh perspective.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f6efe2;--paper:#fffaf1;--terracotta:#b95d3f;--rust:#873d2d;--sage:#28745e;--ink:#282b29;--muted:#746b60;--blue:#244d78;--majorelle:#315caa;--line:#e5d6bf;--gold:#d5a34f;--teal:#174f4a;--tile:#e8d6b8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}button,a{font:inherit}a{color:inherit;text-decoration:none}.topline{height:5px;background:linear-gradient(90deg,var(--terracotta),var(--gold),var(--sage),var(--blue))}
+header{position:sticky;top:0;z-index:20;background:rgba(248,243,233,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;padding:15px 26px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px;min-width:max-content}.brandmark{width:42px;height:42px;border:1.5px solid var(--terracotta);border-radius:50% 50% 45% 45%;display:grid;place-items:center;color:var(--terracotta);font-size:21px;background:var(--paper)}.brandname{font-family:'Playfair Display',serif;font-size:22px;line-height:1}.brandtag{font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:5px}
+nav{display:flex;align-items:center;gap:25px}nav button{border:0;background:none;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:1px;cursor:pointer;padding:10px 0;position:relative}nav button.active,nav button:hover{color:var(--rust)}nav button.active:after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--terracotta)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;background:var(--terracotta);color:white;padding:14px 21px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:1.2px;cursor:pointer;transition:.2s}.btn:hover{background:var(--rust);transform:translateY(-2px)}.btn.outline{background:transparent;color:var(--rust);border:1px solid var(--terracotta)}.mobile-menu{display:none}
+main{min-height:70vh}.page{display:none;animation:fade .35s ease}.page.active{display:block}@keyframes fade{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:none}}
+.wrap{max-width:1180px;margin:auto;padding-left:26px;padding-right:26px}.eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;color:var(--terracotta);text-transform:uppercase}.display{font-family:'Playfair Display',serif;font-weight:600;line-height:1.08;letter-spacing:-.8px}.display em{color:var(--terracotta);font-style:normal}.section{padding:82px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 42px}.section-head h2{font-size:clamp(32px,4vw,48px);margin:12px 0}.section-head p{color:var(--muted);line-height:1.8;font-size:14px}
+.hero{min-height:590px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding-top:45px;padding-bottom:45px}.hero h1{font-size:clamp(48px,6vw,76px);margin:18px 0}.hero p{max-width:430px;color:var(--muted);font-size:16px;line-height:1.9}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-photo{height:490px;position:relative}.hero-photo img{width:100%;height:100%;object-fit:cover;border-radius:48% 48% 4px 4px}.photo-note{position:absolute;bottom:22px;left:-24px;background:var(--paper);padding:17px 22px;box-shadow:0 10px 35px #302b2518}.photo-note strong{font-family:'Playfair Display';font-size:18px;display:block}.photo-note span{font-size:10px;color:var(--muted);letter-spacing:1px}
+.intro-band{background:var(--rust);color:var(--cream);padding:35px 0}.intro-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:25px}.intro-band h2{font-family:'Playfair Display';font-size:27px;font-weight:500;margin:0}.intro-band p{margin:7px 0 0;color:#f1d9c9;font-size:13px}.intro-band .btn{background:var(--cream);color:var(--rust);white-space:nowrap}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.value-card{background:var(--paper);padding:30px 28px;border:1px solid var(--line);text-align:center}.value-icon{font-size:27px;color:var(--sage)}.value-card h3{font-family:'Playfair Display';font-size:22px;margin:14px 0 8px}.value-card p{font-size:13px;color:var(--muted);line-height:1.7;margin:0}
+.feature{display:grid;grid-template-columns:1fr 1fr;background:var(--paper);border:1px solid var(--line)}.feature img{width:100%;height:100%;min-height:360px;object-fit:cover}.feature-copy{padding:48px;align-self:center}.feature-copy h2{font-size:40px;margin:12px 0}.price{font-family:'Playfair Display';font-size:29px;color:var(--terracotta);margin:15px 0}.feature-copy p{color:var(--muted);line-height:1.8;font-size:14px}
+.campaign{background:var(--blue);color:white;text-align:center;padding:70px 20px}.campaign h2{font-size:clamp(36px,5vw,58px);margin:12px 0}.campaign p{color:#dce7e4;line-height:1.8}.campaign .offer{display:inline-block;margin-top:15px;padding:12px 18px;border:1px solid #a8c0ba;letter-spacing:1.5px;font-size:12px;font-weight:700}
+.story-hero{padding:80px 0 55px;text-align:center;background:linear-gradient(120deg,#efe4d2,#f8f3e9)}.story-hero h1{font-size:clamp(42px,6vw,68px);margin:12px auto;max-width:850px}.story-hero p{max-width:650px;margin:18px auto;color:var(--muted);line-height:1.9}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.story-grid img{width:100%;height:390px;object-fit:cover}.story-grid h2{font-size:39px;margin:12px 0}.story-grid p{color:var(--muted);line-height:1.9;font-size:14px}
+.comparison{width:100%;border-collapse:collapse;background:var(--paper);font-size:13px}.comparison th{background:var(--sage);color:white;text-align:left;padding:15px}.comparison td{padding:14px 15px;border-bottom:1px solid var(--line)}.comparison tr:last-child td{border:0}
+.nutrition-card{background:var(--paper);padding:25px;border:1px solid var(--line)}.nutrition-card h3{font-family:'Playfair Display';font-size:21px;margin:12px 0 6px}.nutrition-card p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+.menu-hero{text-align:center;padding:75px 0 45px;background:linear-gradient(135deg,#efe5d5,#f8f3e9)}.menu-hero h1{font-size:64px;margin:10px 0}.menu-hero p{color:var(--muted);font-size:14px}.menu-category{font-family:'Playfair Display';font-size:29px;margin:0 0 20px}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.menu-card{background:var(--paper);border:1px solid var(--line);overflow:hidden;transition:.25s}.menu-card:hover{transform:translateY(-5px);box-shadow:0 15px 35px #302b2510}.menu-card img{width:100%;height:205px;object-fit:cover}.menu-card-body{padding:21px}.menu-card-top{display:flex;justify-content:space-between;gap:12px;align-items:start}.menu-card h3{font-family:'Playfair Display';font-size:20px;margin:0}.menu-price{color:var(--terracotta);font-weight:700;white-space:nowrap}.menu-card p{color:var(--muted);font-size:12px;line-height:1.7;min-height:60px}.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{font-size:9px;letter-spacing:.5px;background:#e9eee5;color:#52624c;padding:6px 8px;border-radius:20px}
+.drink-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.drink{padding:24px;background:#efe6d7;display:flex;gap:15px;align-items:center}.drink-emoji{font-size:31px}.drink h3{font-family:'Playfair Display';font-size:18px;margin:0 0 5px}.drink p{font-size:11px;line-height:1.6;color:var(--muted);margin:0}.drink strong{color:var(--terracotta)}
+.recipe-hero{display:grid;grid-template-columns:1fr 1fr;min-height:430px;background:var(--paper)}.recipe-hero img{width:100%;height:100%;min-height:430px;object-fit:cover}.recipe-intro{padding:55px;align-self:center}.recipe-intro h1{font-size:clamp(39px,5vw,58px);margin:12px 0}.recipe-intro p{color:var(--muted);font-size:14px;line-height:1.8}.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.pill{background:#e8eee4;color:#50624b;padding:9px 12px;border-radius:20px;font-size:10px;font-weight:700}
+.recipe-layout{display:grid;grid-template-columns:.85fr 1.4fr;gap:45px;align-items:start}.ingredients{background:var(--paper);padding:28px;border:1px solid var(--line)}.ingredients h2,.method h2{font-family:'Playfair Display';font-size:29px;margin:0 0 20px}.ingredient-group{margin:20px 0}.ingredient-group h3{font-size:11px;letter-spacing:1.5px;color:var(--terracotta);text-transform:uppercase}.ingredient-group ul{list-style:none;padding:0;margin:8px 0}.ingredient-group li{padding:8px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.ingredient-group li:before{content:"✦";color:var(--sage);margin-right:9px}
+.steps{counter-reset:step}.step{display:grid;grid-template-columns:43px 1fr;gap:15px;margin:0 0 22px}.step:before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:'Playfair Display';font-size:22px;color:var(--terracotta)}.step h3{font-size:14px;margin:3px 0 6px}.step p{font-size:13px;line-height:1.8;color:var(--muted);margin:0}
+.visit-hero{background:var(--blue);color:white;padding:75px 0;text-align:center}.visit-hero h1{font-size:clamp(42px,6vw,65px);margin:12px 0}.visit-hero p{color:#dce7e4}.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.info-card{background:var(--paper);border:1px solid var(--line);padding:30px}.info-card h2{font-family:'Playfair Display';font-size:25px;margin:0 0 20px}.info-row{display:flex;gap:14px;margin:16px 0;color:var(--muted);font-size:13px;line-height:1.7}.info-row b{color:var(--ink)}.map-art{height:260px;background:#e8e6d8;position:relative;overflow:hidden;display:grid;place-items:center}.map-art:before,.map-art:after{content:"";position:absolute;width:130%;height:35px;background:#fffdf8;transform:rotate(-23deg);top:38%;left:-10%}.map-art:after{transform:rotate(28deg);top:68%;left:-10%}.map-pin{position:relative;z-index:2;background:var(--terracotta);color:white;padding:13px 17px;border-radius:30px;font-size:11px;font-weight:700;box-shadow:0 5px 15px #3333}.hours{width:100%;border-collapse:collapse;font-size:13px}.hours td{padding:12px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right;color:var(--muted)}
+footer{background:#292a24;color:#f8f3e9;padding:45px 0 25px;margin-top:0}.footer-inner{display:flex;justify-content:space-between;gap:35px;align-items:start}.footer-brand{font-family:'Playfair Display';font-size:25px}.footer-inner p{font-size:12px;line-height:1.8;color:#c4bdb1;max-width:320px}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links button{background:none;border:0;color:#e5d9c9;font-size:11px;cursor:pointer}.copyright{border-top:1px solid #ffffff25;margin-top:30px;padding-top:18px;color:#a9a397;font-size:10px;letter-spacing:.7px}
+
+/* Moroccan-inspired visual refresh */
+body{background-color:var(--cream);background-image:radial-gradient(circle at 1px 1px,#b95d3f12 1px,transparent 0);background-size:24px 24px}
+.topline{height:7px;background:linear-gradient(90deg,#174f4a 0 18%,#315caa 18% 38%,#d5a34f 38% 58%,#b95d3f 58% 78%,#28745e 78%)}
+header{background:rgba(246,239,226,.96);border-bottom:2px solid #d5a34f}
+.brandmark{border-radius:12px 12px 12px 2px;background:#174f4a;color:#f4d18a;border:2px solid #d5a34f;box-shadow:inset 0 0 0 3px #174f4a,inset 0 0 0 4px #f4d18a;transform:rotate(45deg)}
+.brandmark{font-size:19px}.brandmark::first-letter{transform:rotate(-45deg)}
+.brandname{color:#174f4a;font-size:24px}.brandtag{color:#92734a;font-weight:700}
+nav button.active,nav button:hover{color:#b95d3f}
+nav button.active:after{background:#d5a34f;height:3px}
+.btn{background:#174f4a;border:1px solid #d5a34f;box-shadow:3px 3px 0 #d5a34f;border-radius:2px;letter-spacing:1.4px}
+.btn:hover{background:#315caa;transform:translate(-1px,-1px);box-shadow:4px 4px 0 #d5a34f}
+.btn.outline{border:1px solid #b95d3f;box-shadow:none;color:#873d2d}
+.eyebrow{color:#b95d3f;letter-spacing:3px}
+.display em{color:#b95d3f}
+.hero{position:relative}
+.hero:before{content:"";position:absolute;left:0;top:20px;width:115px;height:115px;opacity:.22;pointer-events:none;background:repeating-conic-gradient(from 0deg,#315caa 0 15deg,transparent 15deg 30deg);clip-path:polygon(50% 0,61% 28%,90% 10%,72% 39%,100% 50%,72% 61%,90% 90%,61% 72%,50% 100%,39% 72%,10% 90%,28% 61%,0 50%,28% 39%,10% 10%,39% 28%)}
+.hero-photo{padding:12px;background:#fffaf1;border:1px solid #d5a34f;box-shadow:12px 12px 0 #174f4a; height:500px}
+.hero-photo img{border-radius:48% 48% 3px 3px;border:5px solid #f6efe2;outline:1px solid #d5a34f}
+.photo-note{border:1px solid #d5a34f;border-left:5px solid #b95d3f}
+.intro-band{background:#174f4a;border-top:5px solid #d5a34f;border-bottom:5px solid #d5a34f;position:relative}
+.intro-band:before,.intro-band:after{content:"✧ ✦ ✧ ✦ ✧";position:absolute;left:0;right:0;text-align:center;color:#e6bd70;font-size:11px;letter-spacing:15px;opacity:.65}
+.intro-band:before{top:5px}.intro-band:after{bottom:5px}
+.intro-band .wrap{padding-top:12px;padding-bottom:12px}
+.section-head{position:relative}
+.section-head:after{content:"✧  ━━━━━  ✧";display:block;color:#d5a34f;letter-spacing:5px;font-size:13px;margin-top:22px}
+.value-card,.nutrition-card{border:1px solid #d5a34f;box-shadow:5px 5px 0 #e8d6b8;position:relative}
+.value-card:before,.nutrition-card:before{content:"";position:absolute;inset:6px;border:1px solid #e8d6b8;pointer-events:none}
+.value-icon{color:#b95d3f}
+.feature{border:2px solid #d5a34f;box-shadow:9px 9px 0 #174f4a}
+.feature-copy{background:linear-gradient(135deg,#fffaf1,#f1e5d2)}
+.campaign{background:#244d78;border-top:7px solid #d5a34f;border-bottom:7px solid #d5a34f;position:relative}
+.campaign:before{content:"";position:absolute;inset:13px;border:1px solid #d5a34f;pointer-events:none}
+.campaign .offer{border-color:#e6bd70;color:#f7d99f}
+.story-hero,.menu-hero{background-color:#eadcc5;background-image:repeating-linear-gradient(45deg,transparent 0 18px,#315caa0c 18px 20px),repeating-linear-gradient(-45deg,transparent 0 18px,#b95d3f0b 18px 20px);border-bottom:4px solid #d5a34f}
+.story-hero:before,.menu-hero:before{content:"✧  ✦  ✧  ✦  ✧";display:block;color:#b78a45;letter-spacing:12px;font-size:15px}
+.story-grid img{border:9px solid #fffaf1;outline:1px solid #d5a34f;box-shadow:10px 10px 0 #174f4a}
+.comparison th{background:#174f4a;border-bottom:3px solid #d5a34f}
+.menu-category{color:#174f4a}
+.menu-card{border:1px solid #d5a34f;box-shadow:4px 4px 0 #e8d6b8}
+.menu-card img{border-bottom:4px solid #d5a34f}
+.menu-card h3{color:#174f4a}
+.tag{background:#e3eee5;color:#205b4b;border:1px solid #c2d5c4}
+.drink{background:#e8ddc9;border-left:4px solid #d5a34f}
+.drink h3{color:#174f4a}
+.recipe-hero{border-bottom:5px solid #d5a34f}
+.recipe-hero img{border-right:8px solid #d5a34f}
+.pill{background:#e3eee5;color:#205b4b;border:1px solid #b9cdbb}
+.ingredients{border:1px solid #d5a34f;box-shadow:6px 6px 0 #e8d6b8}
+.ingredient-group li:before{color:#b95d3f}
+.step:before{color:#b95d3f}
+.visit-hero{background:#174f4a;border-top:5px solid #d5a34f;border-bottom:5px solid #d5a34f;position:relative}
+.visit-hero:after{content:"✧  ✦  ✧  ✦  ✧";display:block;color:#e6bd70;letter-spacing:12px;margin-top:25px}
+.info-card{border:1px solid #d5a34f;box-shadow:5px 5px 0 #e8d6b8}
+.map-art{border:5px solid #fffaf1;outline:1px solid #d5a34f;background-color:#e7d7bd;background-image:linear-gradient(45deg,#315caa12 25%,transparent 25%),linear-gradient(-45deg,#b95d3f12 25%,transparent 25%);background-size:26px 26px}
+.map-art:before,.map-art:after{background:#fffaf1}
+.map-pin{background:#b95d3f;border:2px solid #d5a34f}
+footer{background:#153e3a;border-top:7px solid #d5a34f;position:relative}
+footer:before{content:"✧  ✦  ✧  ✦  ✧  ✦  ✧";display:block;text-align:center;color:#d5a34f;letter-spacing:13px;padding:0 0 25px}
+.footer-brand{color:#f3d79e}
+.copyright{border-color:#d5a34f55}
+@media(max-width:800px){.hero-photo{height:360px}.hero:before{display:none}.intro-band:before,.intro-band:after{display:none}.recipe-hero img{border-right:0;border-bottom:6px solid #d5a34f}}
+
+@media(max-width:800px){.nav{flex-wrap:wrap}.mobile-menu{display:block;background:none;border:1px solid var(--line);padding:8px 11px;color:var(--ink)}nav{display:none;width:100%;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav button{text-align:left;border-top:1px solid var(--line);padding:13px 2px}.nav>.btn{display:none}.hero,.feature,.story-grid,.recipe-hero,.recipe-layout,.visit-grid{grid-template-columns:1fr}.hero{padding-top:35px}.hero-photo{height:350px}.photo-note{left:10px}.three,.menu-grid,.drink-grid{grid-template-columns:1fr 1fr}.feature-copy{padding:30px}.recipe-intro{padding:35px}.recipe-hero img{min-height:280px}.intro-band .wrap,.footer-inner{flex-direction:column;align-items:flex-start}.section{padding:60px 0}.story-grid img{height:280px}}
+@media(max-width:520px){.three,.menu-grid,.drink-grid{grid-template-columns:1fr}.menu-hero h1{font-size:48px}.wrap{padding-left:19px;padding-right:19px}.hero h1{font-size:48px}.brandname{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header><div class="nav">
+  <a class="brand" href="#" onclick="showPage('home');return false"><span class="brandmark">✳</span><span><span class="brandname">Medina Bowl</span><span class="brandtag">INSPIRED BY MOROCCO</span></span></a>
+  <button class="mobile-menu" onclick="document.querySelector('nav').classList.toggle('open')">☰ MENU</button>
+  <nav id="mainNav">
+    <button class="active" data-page="home" onclick="showPage('home')">HOME</button>
+    <button data-page="story" onclick="showPage('story')">OUR STORY</button>
+    <button data-page="menu" onclick="showPage('menu')">MENU</button>
+    <button data-page="signature" onclick="showPage('signature')">SIGNATURE BOWL</button>
+    <button data-page="visit" onclick="showPage('visit')">VISIT US</button>
+  </nav>
+  <button class="btn" onclick="showPage('menu')">EXPLORE MENU ↗</button>
+</div></header>
+
+<main>
+<section id="home" class="page active">
+  <div class="wrap hero">
+    <div><div class="eyebrow">A little Moroccan magic</div><h1 class="display">Moroccan flavour.<br><em>Fresh perspective.</em></h1><p>Fresh ingredients. Bold spices. A modern twist on Moroccan cuisine. Discover colourful bowls inspired by the bustling medinas of Morocco.</p><div class="hero-actions"><button class="btn" onclick="showPage('menu')">EXPLORE OUR MENU ↗</button><button class="btn outline" onclick="showPage('story')">OUR STORY</button></div></div>
+    <div class="hero-photo"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1100&q=85" alt="Colourful fresh bowl with vegetables and grains"><div class="photo-note"><strong>Good food. Bold flavour.</strong><span>MADE FRESH, EVERY DAY</span></div></div>
+  </div>
+  <div class="intro-band"><div class="wrap"><div><h2>A little taste of Morocco, made fresh for you.</h2><p>Ahlan wa sahlan — welcome to a world of colour, spice and generous hospitality.</p></div><button class="btn" onclick="showPage('menu')">SEE WHAT'S COOKING</button></div></div>
+  <div class="section"><div class="wrap"><div class="section-head"><div class="eyebrow">The Medina Bowl way</div><h2>Fresh, flavourful, <em>balanced.</em></h2><p>We believe nutritious food should be exciting, satisfying and full of personality.</p></div><div class="three">
+    <div class="value-card"><div class="value-icon">✿</div><h3>Fresh</h3><p>Fresh produce, herbs and wholesome ingredients in every bowl.</p></div>
+    <div class="value-card"><div class="value-icon">✧</div><h3>Flavourful</h3><p>Traditional Moroccan-inspired spices bring every ingredient to life.</p></div>
+    <div class="value-card"><div class="value-icon">◒</div><h3>Balanced</h3><p>A thoughtful mix of protein, fibre, whole grains and healthy fats.</p></div>
+  </div></div></div>
+  <div class="wrap" style="padding-bottom:80px"><div class="feature"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85" alt="Fresh colourful grain bowl"><div class="feature-copy"><div class="eyebrow">Our signature dish</div><h2 class="display">The Atlas<br><em>Chicken Bowl</em></h2><div class="price">$19</div><p>Moroccan-spiced grilled chicken, wholemeal couscous, roasted vegetables, chickpeas and fresh mint yoghurt.</p><p><b>High in protein</b> · <b>Source of fibre</b></p><button class="btn" onclick="showPage('signature')">MEET THE ATLAS BOWL ↗</button></div></div></div>
+  <div class="campaign"><div class="eyebrow" style="color:#e5bc87">Introducing Medina Bowl</div><h2 class="display">A fresh take<br>on <em style="color:#e9bd85">Moroccan.</em></h2><p>Discover colourful bowls, vibrant spices and fresh ingredients inspired by Morocco.</p><div class="offer">LAUNCH SPECIAL · 10% OFF YOUR FIRST BOWL</div></div>
+</section>
+
+<section id="story" class="page">
+  <div class="story-hero"><div class="eyebrow">The inspiration behind every bowl</div><h1 class="display">From the medina<br>to <em>your bowl.</em></h1><p>The word <i>medina</i> refers to the historic old quarters found in Moroccan cities. These lively areas are filled with colourful markets, fresh produce, spices and traditional food. We bring that energy into a fresh, modern dining experience.</p></div>
+  <div class="section"><div class="wrap story-grid"><img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=1000&q=85" alt="Colourful Moroccan architecture and market atmosphere"><div><div class="eyebrow">Our inspiration</div><h2 class="display">A world of colour, <em>culture & flavour.</em></h2><p>Inspired by the vibrant atmosphere of Morocco, Medina Bowl celebrates the warmth of shared meals, aromatic spices and fresh ingredients. Our menu takes inspiration from traditional flavours and gives them a contemporary spin.</p><p>Our goal is simple: make food that feels exciting to eat and good to come back to.</p></div></div></div>
+  <div class="section" style="background:#efe7d9"><div class="wrap"><div class="section-head"><div class="eyebrow">Traditional flavours, reimagined</div><h2>Our <em>healthy twist.</em></h2><p>We make considered ingredient choices while keeping the flavours that make Moroccan-inspired food so special.</p></div><table class="comparison"><thead><tr><th>Traditional approach</th><th>Medina Bowl's approach</th></tr></thead><tbody><tr><td>Refined grains</td><td>Wholemeal couscous and quinoa</td></tr><tr><td>Deep-fried foods</td><td>Oven-baked alternatives</td></tr><tr><td>Heavy sauces</td><td>Greek yoghurt and herb dressings</td></tr><tr><td>Large amounts of oil</td><td>Moderate amounts of olive oil</td></tr><tr><td>Meat-focused meals</td><td>Balanced lean proteins and legumes</td></tr><tr><td>Sugary drinks</td><td>Fresh fruit and herb-based drinks</td></tr></tbody></table></div></div>
+  <div class="section"><div class="wrap"><div class="section-head"><div class="eyebrow">Eating well, the Moroccan way</div><h2>Good ingredients do <em>good things.</em></h2></div><div class="three">
+    <div class="nutrition-card"><div class="value-icon">◈</div><h3>Protein</h3><p>Chicken, chickpeas and Greek yoghurt provide protein for growth and muscle repair.</p></div>
+    <div class="nutrition-card"><div class="value-icon">❋</div><h3>Fibre</h3><p>Whole grains, legumes and vegetables provide dietary fibre that supports digestive health.</p></div>
+    <div class="nutrition-card"><div class="value-icon">✿</div><h3>Healthy fats</h3><p>Olive oil and seeds provide unsaturated fats as part of a balanced diet.</p></div>
+  </div><p style="text-align:center;color:var(--muted);font-size:13px;margin:28px auto 0;max-width:700px;line-height:1.8">At Medina Bowl, healthy eating never means compromising on flavour. We bring together traditional Moroccan inspiration and modern nutritional choices to create meals that are fresh, satisfying and enjoyable.</p></div></div>
+</section>
+
+<section id="menu" class="page">
+  <div class="menu-hero"><div class="eyebrow">Freshly made · Moroccan inspired</div><h1 class="display">The <em>menu.</em></h1><p>Bold flavours, balanced ingredients. Find your new favourite.</p></div>
+  <div class="section"><div class="wrap"><h2 class="menu-category">Bowls & bites</h2><div class="menu-grid">
+    <article class="menu-card"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85" alt="Moroccan chicken bowl"><div class="menu-card-body"><div class="menu-card-top"><h3>01. Atlas Chicken Bowl</h3><span class="menu-price">$19</span></div><p>Grilled Moroccan-spiced chicken, wholemeal couscous, roasted vegetables, chickpeas and mint yoghurt.</p><div class="tags"><span class="tag">LEAN PROTEIN</span><span class="tag">FIBRE</span><span class="tag">WHOLE GRAINS</span></div></div></article>
+    <article class="menu-card"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=85" alt="Vegetarian chickpea bowl"><div class="menu-card-body"><div class="menu-card-top"><h3>02. Moroccan Chickpea Bowl</h3><span class="menu-price">$16</span></div><p>Roasted chickpeas, quinoa, cucumber, tomato, fresh herbs and lemon-tahini dressing.</p><div class="tags"><span class="tag">PLANT PROTEIN</span><span class="tag">FIBRE</span><span class="tag">VEGETARIAN</span></div></div></article>
+    <article class="menu-card"><img src="https://images.unsplash.com/photo-1547592180-8c7c7c1c8b5c?auto=format&fit=crop&w=800&q=85" alt="Golden baked vegetable pastry"><div class="menu-card-body"><div class="menu-card-top"><h3>03. Baked Vegetable Briouats</h3><span class="menu-price">$14</span></div><p>Crispy filo parcels filled with roasted vegetables, herbs and Moroccan spices.</p><div class="tags"><span class="tag">OVEN-BAKED</span><span class="tag">VEGETABLES</span></div></div></article>
+  </div></div></div>
+  <div class="section" style="background:#efe7d9"><div class="wrap"><div class="section-head"><div class="eyebrow">Sip something refreshing</div><h2>Fresh <em>drinks.</em></h2><p>Bright, refreshing flavours to go with your bowl.</p></div><div class="drink-grid">
+    <div class="drink"><div class="drink-emoji">🍋</div><div><h3>Mint & Lemon Cooler <strong>$7</strong></h3><p>Fresh mint, lemon, sparkling water and a touch of honey.</p></div></div>
+    <div class="drink"><div class="drink-emoji">🍊</div><div><h3>Orange Blossom Iced Tea <strong>$7</strong></h3><p>Chilled tea infused with orange, mint and a little honey.</p></div></div>
+    <div class="drink"><div class="drink-emoji">🫐</div><div><h3>Berry & Pomegranate Refresher <strong>$8</strong></h3><p>Pomegranate, mixed berries, lemon and sparkling water.</p></div></div>
+  </div><p style="font-size:11px;color:var(--muted);margin-top:22px">Dietary indicators are provided as a guide. Please check with our team about ingredients and preparation.</p></div></div>
+</section>
+
+<section id="signature" class="page">
+  <div class="recipe-hero"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1100&q=85" alt="Finished Atlas-style chicken and grain bowl"><div class="recipe-intro"><div class="eyebrow">The recipe behind the favourite</div><h1 class="display">The Atlas <em>Chicken Bowl.</em></h1><p>Our signature bowl combines bold Moroccan-inspired spices with fresh, nutrient-rich ingredients. A satisfying mix of lean protein, whole grains, legumes and colourful vegetables.</p><div class="pills"><span class="pill">SERVES 4</span><span class="pill">HIGH IN PROTEIN</span><span class="pill">SOURCE OF FIBRE</span></div></div></div>
+  <div class="section"><div class="wrap recipe-layout">
+    <aside class="ingredients"><h2>What's in it?</h2>
+      <div class="ingredient-group"><h3>Chicken</h3><ul><li>500 g chicken breast</li><li>1 tbsp olive oil</li><li>Cumin, paprika, coriander and cinnamon</li><li>1 garlic clove</li><li>½ lemon</li></ul></div>
+      <div class="ingredient-group"><h3>Couscous</h3><ul><li>1½ cups wholemeal couscous</li><li>1½ cups reduced-salt vegetable stock</li><li>½ cup parsley</li></ul></div>
+      <div class="ingredient-group"><h3>Vegetables</h3><ul><li>1 red capsicum</li><li>1 zucchini</li><li>1 red onion</li><li>1 cup cherry tomatoes</li><li>1 tbsp olive oil</li></ul></div>
+      <div class="ingredient-group"><h3>Chickpeas</h3><ul><li>1 × 400 g can chickpeas</li><li>½ tsp cumin</li><li>½ tsp paprika</li></ul></div>
+      <div class="ingredient-group"><h3>Mint yoghurt</h3><ul><li>¾ cup Greek yoghurt</li><li>2 tbsp fresh mint</li><li>½ lemon</li></ul></div>
+    </aside>
+    <div class="method"><div class="eyebrow">Let's make it</div><h2>Method</h2><div class="steps">
+      <div class="step"><div><h3>Marinate</h3><p>Combine chicken with olive oil, cumin, paprika, coriander, cinnamon, crushed garlic and lemon juice. Coat evenly and refrigerate for at least 10 minutes.</p></div></div>
+      <div class="step"><div><h3>Prepare</h3><p>Chop the capsicum, zucchini, red onion and cherry tomatoes into similar-sized pieces.</p></div></div>
+      <div class="step"><div><h3>Roast</h3><p>Toss vegetables and drained chickpeas with olive oil and spices. Roast at 200°C for approximately 20–25 minutes, turning halfway.</p></div></div>
+      <div class="step"><div><h3>Cook the chicken</h3><p>Cook the chicken in a hot pan or on a grill until completely cooked through, reaching an internal temperature of 75°C. Rest before slicing.</p></div></div>
+      <div class="step"><div><h3>Prepare couscous</h3><p>Pour hot vegetable stock over the couscous, cover for approximately 5 minutes, fluff with a fork and mix through parsley.</p></div></div>
+      <div class="step"><div><h3>Make the dressing</h3><p>Combine Greek yoghurt, chopped mint and lemon juice.</p></div></div>
+      <div class="step"><div><h3>Assemble</h3><p>Divide couscous between four bowls. Arrange chicken, roasted vegetables and chickpeas on top.</p></div></div>
+      <div class="step"><div><h3>Garnish & serve</h3><p>Finish with mint leaves, coriander and lemon wedges. Serve immediately.</p></div></div>
+    </div></div>
+  </div></div>
+  <div class="section" style="background:#efe7d9"><div class="wrap"><div class="section-head"><div class="eyebrow">The nutrition behind the bowl</div><h2>Why it's a <em>balanced meal.</em></h2></div><div class="three">
+    <div class="nutrition-card"><h3>Protein</h3><p>Chicken and chickpeas provide protein.</p></div><div class="nutrition-card"><h3>Fibre</h3><p>Wholemeal couscous and chickpeas provide dietary fibre.</p></div><div class="nutrition-card"><h3>Vitamins & minerals</h3><p>Colourful vegetables contribute a range of vitamins and minerals.</p></div><div class="nutrition-card"><h3>Healthy fats</h3><p>Olive oil provides unsaturated fats.</p></div><div class="nutrition-card"><h3>Calcium</h3><p>Greek yoghurt contributes protein and calcium.</p></div><div class="nutrition-card"><h3>Whole grains</h3><p>Wholemeal couscous adds complex carbohydrates to the meal.</p></div>
+  </div></div></div>
+</section>
+
+<section id="visit" class="page">
+  <div class="visit-hero"><div class="eyebrow" style="color:#e7c49b">Your table is waiting</div><h1 class="display">Find your way<br>to <em style="color:#e7c49b">the medina.</em></h1><p>Fresh flavours, colourful bowls and a modern take on Moroccan food.</p></div>
+  <div class="section"><div class="wrap visit-grid">
+    <div class="info-card"><h2>Come say hello.</h2><div class="info-row"><span>⌖</span><div><b>Find us</b><br>42 Medina Lane, Bondi NSW 2026<br><small>Fictional address for our restaurant concept</small></div></div><div class="info-row"><span>◎</span><div><b>Instagram</b><br>@medinabowl</div></div><div class="info-row"><span>✉</span><div><b>Email</b><br>hello@medinabowl.com</div></div><div class="info-row"><span>✦</span><div><b>Our vibe</b><br>Fresh, relaxed and full of flavour.</div></div><div class="map-art"><div class="map-pin">✳ MEDINA BOWL · BONDI</div></div></div>
+    <div class="info-card"><h2>Opening hours.</h2><table class="hours"><tr><td>Monday – Friday</td><td>11 am – 8 pm</td></tr><tr><td>Saturday – Sunday</td><td>10 am – 9 pm</td></tr></table><div style="margin-top:30px;padding:23px;background:#efe7d9"><div class="eyebrow">A little reminder</div><h3 style="font-family:'Playfair Display';font-size:22px;margin:10px 0">Come hungry.<br>Leave happy.</h3><p style="font-size:12px;color:var(--muted);line-height:1.7">Your next favourite bowl is waiting. Explore our menu and find your flavour.</p><button class="btn" onclick="showPage('menu')">EXPLORE THE MENU ↗</button></div></div>
+  </div></div>
+</section>
+</main>
+<footer><div class="wrap"><div class="footer-inner"><div><div class="footer-brand">✳ Medina Bowl</div><p>Moroccan flavour. Fresh perspective. Fresh ingredients and bold flavours, inspired by Morocco.</p></div><div><div class="eyebrow" style="color:#d9a65c">Explore</div><div class="footer-links" style="margin-top:15px"><button onclick="showPage('home')">Home</button><button onclick="showPage('story')">Our Story</button><button onclick="showPage('menu')">Menu</button><button onclick="showPage('signature')">Signature Bowl</button><button onclick="showPage('visit')">Visit Us</button></div></div></div><div class="copyright">© 2026 MEDINA BOWL · INSPIRED BY MOROCCO · FICTIONAL RESTAURANT CONCEPT</div></div></footer>
+<script>
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));
+  document.querySelectorAll('nav button[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+  document.querySelector('nav').classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
